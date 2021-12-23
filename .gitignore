@@ -1,0 +1,5 @@
+build
+*.ex.*
+test
+.vscode
+vendor/**
