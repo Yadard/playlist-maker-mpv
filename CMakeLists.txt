@@ -5,6 +5,13 @@ add_executable(watch-playlist src/main.cpp src/regex.cpp)
 
 target_include_directories(watch-playlist PUBLIC include)
 
+set_target_properties(watch-playlist
+    PROPERTIES
+        CXX_STANDARD 17
+        CXX_STANDARD_REQUIRED YES
+        CXX_EXTENSIONS NO
+)
+
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
 SET(PCRE2_BUILD_PCRE2GREP OFF CACHE BOOL "Build PCRE2GREP")
 SET(PCRE2_BUILD_TESTS OFF CACHE BOOL "Build TESTS")
